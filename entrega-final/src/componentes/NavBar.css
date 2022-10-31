@@ -1,0 +1,30 @@
+.menu-navbar-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: yellow;
+    box-shadow: black 0px 4px 12px;
+    height: 90px;
+}
+
+.menu-title{
+    margin-left: 10px;
+    color: blue;
+    font-size: 35px;
+}
+
+.menu-items{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-right: 300px;
+}
+
+.menu-list{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+    font-size: 20px;
+}
