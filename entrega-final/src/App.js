@@ -9,9 +9,10 @@ import ItemDetailContainer from './componentes/ItemDetailContainer';
 function App() {
   return (
     <BrowserRouter>
+    <NavBar/>
     <Routes>
-      <Route path='/'element={<NavBar/>}/>
       <Route path='/' element={<ItemsListContainer/>}/>
+    
       <Route path='/cart'element={<Cart/>}/>
       <Route path='/detail/' element={<ItemDetailContainer/>}/>
     </Routes>

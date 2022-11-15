@@ -2,9 +2,7 @@
 
 const ItemDetailContainer = () => {
   return (
-    <div>
-        <img src={'./assets/play5.jpg'}/>
-    </div>
+    <div></div>
   )
 }
 
