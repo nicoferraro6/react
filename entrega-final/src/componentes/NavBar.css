@@ -1,15 +1,16 @@
 .menu-navbar-container{
     display: flex;
     justify-content: space-between;
-    background-color: yellow;
+    background-color: white;
     box-shadow: black 0px 4px 12px;
     height: 90px;
 }
 
 .menu-title{
     margin-left: 10px;
-    color: blue;
+    color: red;
     font-size: 35px;
+    border-color: black;
 }
 
 .menu-items{
@@ -27,4 +28,13 @@
     color: black;
     margin-top: 20px;
     font-size: 20px;
+}
+
+
+.active{
+    color: red;
+}
+
+.inactive{
+    color: blue;
 }

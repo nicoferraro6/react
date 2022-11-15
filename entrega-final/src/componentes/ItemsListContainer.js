@@ -1,14 +1,23 @@
-import React from 'react'
+import {data} from './data';
 import './ItemsListContainer.css'
+import{useState, useEffect} from 'react';
+import ItemList from './ItemList';
 
-const ItemsListContainer = (props) => {
-    console.log(props)
+const ItemsListContainer = () => {
+  const [items, setItems] = useState([]);
+  const getProducts = new Promise ((res, rej) => {
+    setTimeout(() => {
+      res(data);
+    }, 2000)
+  })
+  useEffect(() =>{
+    getProducts.then((res) => setItems(res));
+  }, [])
   return (
-    <div className='message-greeting-container'>
-        <h2 className='message'>{props.name}</h2>
-
+    <div>
+      <ItemList products={items}/>
     </div>
-  )
-}
+  );
+};
 
 export default ItemsListContainer
