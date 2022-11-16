@@ -17,7 +17,7 @@ const NavBar = () => {
         }}>
             <li className='justify'>
                 <NavLink to="/category/productos" >
-                    Productos 
+                    Productos
                 </NavLink>
             </li>
             <li className='justify'>
