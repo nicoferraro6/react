@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./IconCart.css";
+import "./IconCart.css";
 import { useState, useEffect } from "react";
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
@@ -17,10 +17,10 @@ export default function IconCart() {
   }, [carrito]);
 
   return (
-    <div className={s.IconCartContainer}>
+    <div className="IconCartContainer">
       {carrito.length > 0 ? (
         <i class="bx bx-cart-alt">
-          <span className={s.SpanCarrito}>{cantidad}</span>
+          <span className="SpanCarrito">{cantidad}</span>
         </i>
       ) : null}
     </div>

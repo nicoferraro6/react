@@ -47,7 +47,7 @@ import IconSearch from "../IconSearch/IconSearch";
 import Logo from "../Logo/Logo";
 import { motion } from "framer-motion";
 
-import s from "./NavBar.css";
+import "./NavBar.css";
 
 const variants = {
   open: { x: "190px" },
@@ -62,11 +62,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className={s.NavbarContainer}>
+    <div className="NavbarContainer">
       <Logo />
-      <div className={s.CategoriasContainer}>
+      <div className="CategoriasContainer">
         <ul>
-          <NavLink to="/productos" className={s.NavLink}>
+          <NavLink to="/productos" className="NavLink">
             <motion.li whileHover={{ scale: 1.1 }}>Productos</motion.li>
           </NavLink>
 
@@ -74,7 +74,7 @@ export default function Navbar() {
             return (
               <NavLink
                 to={`/categoria/${c.id}`}
-                className={s.NavLink}
+                className="NavLink"
                 key={c.nombre}
               >
                 <motion.li key={c.id} whileHover={{ scale: 1.1 }}>
@@ -88,10 +88,10 @@ export default function Navbar() {
       <motion.div
         animate={isOpen ? "open" : "closed"}
         variants={variants}
-        className={s.CategoriasContainerMobile}
+        className="CategoriasContainerMobile"
       >
         <ul>
-          <NavLink to="/productos" className={s.NavLink}>
+          <NavLink to="/productos" className="NavLink">
             <li>Productos</li>
           </NavLink>
 
@@ -99,7 +99,7 @@ export default function Navbar() {
             return (
               <NavLink
                 to={`/categoria/${c.id}`}
-                className={s.NavLink}
+                className="NavLink"
                 key={c.nombre}
               >
                 <li key={c.id}>{c.nombre}</li>
@@ -108,7 +108,7 @@ export default function Navbar() {
           })}
         </ul>
       </motion.div>
-      <div className={s.IconContainer}>
+      <div className="IconContainer">
         <IconMenu onClick={() => setIsOpen((isOpen) => !isOpen)} />
 
         <NavLink to="/carrito">

@@ -1,11 +1,11 @@
 import React from "react";
-import s from "./Header.css";
+import "./Header.css";
 import Navbar from "./Navbar/NavBar";
 
 export default function Header() {
   return (
-    <div className={s.Header}>
-      <div className={s.HeaderContainer}>
+    <div className="Header">
+      <div className="HeaderContainer">
         <Navbar />
       </div>
     </div>

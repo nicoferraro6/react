@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import s from "./Formulario.css";
+import "./Formulario.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
@@ -72,7 +72,7 @@ export default function Formulario() {
           rellenarEstado(e);
         }}
       />
-      <button className={s.BotonFormulario}>TERMINAR COMPRA</button>
+      <button className="BotonFormulario">TERMINAR COMPRA</button>
     </form>
   );
 }

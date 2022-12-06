@@ -1,4 +1,4 @@
-import s from "./ItemDetail.css";
+import "./ItemDetail.css";
 import { NavLink } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
@@ -32,23 +32,23 @@ export default function ItemDetail({ producto }) {
   }
 
   return (
-    <div className={s.ItemDetail}>
-      <div className={s.ImagenContainer}>
+    <div className="ItemDetail">
+      <div className="ImagenContainer">
         <img src={imagen} alt={nombre} />
       </div>
 
-      <div className={s.DescripcionContainer}>
+      <div className="DescripcionContainer">
         <h3>{nombre}</h3>
         <p>{descripcion}</p>
-        <div className={s.PreVenta}>
-          <p className={s.Precio}>${ponerPuntos(precio.toString())}</p>
-          <div className={s.DetallesVenta}>
+        <div className="PreVenta">
+          <p className="Precio">${ponerPuntos(precio.toString())}</p>
+          <div className="DetallesVenta">
             {finalizar ? (
-              <NavLink to="/carrito" className={s.BotonVolver}>
+              <NavLink to="/carrito" className="BotonVolver">
                 Finalizar Compra
               </NavLink>
             ) : (
-              <div className={s.AgregarCarrito}>
+              <div className="AgregarCarrito">
                 <ItemCount
                   stock={5}
                   initial={1}
@@ -59,7 +59,7 @@ export default function ItemDetail({ producto }) {
             )}
           </div>
         </div>
-        <NavLink to="/" className={s.BotonVolver}>
+        <NavLink to="/" className="BotonVolver">
           Volver
         </NavLink>
       </div>

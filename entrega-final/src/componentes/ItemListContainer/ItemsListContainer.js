@@ -39,15 +39,17 @@ import ItemList from "../ItemList/ItemList";
 import { useState, useEffect } from "react";
 import IconSearch from "../Header/IconSearch/IconSearch";
 
+
 import { cargarProductos } from "../../Funciones/cargarProductos";
 
 
 
-import s from "./ItemsListContainer.css";
+import "./ItemsListContainer.css";
 
 
 export default function ItemListContainer() {
   const [productos, setProductos] = useState([]);
+
 
   useEffect(() => {
     cargarProductos().then((data) => {
@@ -56,12 +58,12 @@ export default function ItemListContainer() {
   }, []);
 
   return (
-    <div className={s.ItemListContainer}>
-      <div className={s.SearchContainer}>
+    <div className="ItemListContainer">
+      <div className="SearchContainer">
     
       </div>
 
-      <div className={s.ContainerItemList}>
+      <div className="ContainerItemList">
         <ItemList items={productos} />
       </div>
     </div>

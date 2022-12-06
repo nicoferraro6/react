@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Cart.css";
+import "./Cart.css";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
@@ -23,25 +23,25 @@ export default function Carrito() {
   }, [carrito]);
 
   return (
-    <div className={s.Carrito}>
-      <div className={s.CarritoContainer}>
+    <div className="Carrito">
+      <div className="CarritoContainer">
         <ul>
           {carrito.length > 0 ? (
             carrito.map((item, index) => {
               return (
-                <div className={s.ListaCarrito} key={item.nombre}>
+                <div className="ListaCarrito" key={item.nombre}>
                   <li>
                     <img src={item.imagen} alt="" />
 
-                    <div className={s.ListaInfo}>
+                    <div className="ListaInfo">
                       <p key={index}>{item.nombre}</p>
-                      <div className={s.PrecioCantidad}>
+                      <div className="PrecioCantidad">
                         <p>${ponerPuntos(item.precio.toString())}</p>
                         <p>x{item.cantidad}</p>
                       </div>
                     </div>
                   </li>
-                  <div className={s.SubTotal}>
+                  <div className="SubTotal">
                     SubTotal: $
                     {ponerPuntos((item.cantidad * item.precio).toString())}
                   </div>
@@ -60,17 +60,17 @@ export default function Carrito() {
         </ul>
 
         {carrito.length > 0 ? (
-          <button className={s.botonEliminarCarrito} onClick={deleteCart}>
+          <button className="botonEliminarCarrito" onClick={deleteCart}>
             Eliminar Carrito
           </button>
         ) : null}
 
         <NavLink to="/">
-          <button className={s.botonVolver}>Volver</button>
+          <button className="botonVolver">Volver</button>
         </NavLink>
       </div>
       {carrito.length > 0 ? (
-        <div className={s.TotalDiv}>
+        <div className="TotalDiv">
           <h1>Total: ${ponerPuntos(total.toString())}</h1>
           <Formulario />
       

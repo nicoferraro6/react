@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../Context/UserContext.js";
 
-import s from "./ItemCount.css";
+import "./ItemCount.css";
 
 export default function ItemCount({ stock, initial, producto, onAdd }) {
   const { carrito, AddToCart, Cantidad } = useContext(UserContext);
@@ -21,16 +21,16 @@ export default function ItemCount({ stock, initial, producto, onAdd }) {
   }
 
   return (
-    <div className={s.Contador}>
-      <div className={s.ContadorContainer}>
-        <div className={s.Botones}>
+    <div className="Contador">
+      <div className="ContadorContainer">
+        <div className="Botones">
           <button onClick={() => itemCount(false)}>-</button>
-          <p className={s.NumeroContador}>{contador}</p>
+          <p className="NumeroContador">{contador}</p>
           <button onClick={() => itemCount(true)}>+</button>
         </div>
       </div>
       <button
-        className={s.BotonCarrito}
+        className="BotonCarrito"
         onClick={() => {
           onAdd(contador);
           AddToCart({ ...producto, cantidad: contador });

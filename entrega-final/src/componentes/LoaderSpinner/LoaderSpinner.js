@@ -1,6 +1,6 @@
 import React from "react";
-import s from "./LoaderSpinner.css";
+import "./LoaderSpinner.css";
 
 export default function LoaderSpinner() {
-  return <div className={s.LoaderSpinner}></div>;
+  return <div className="LoaderSpinner"></div>;
 }

@@ -1,11 +1,11 @@
 import React from "react";
 
-import s from "./Footer.css";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className={s.Footer}>
-      <div className={s.FooterContainer}>
+    <div className="Footer">
+      <div className="FooterContainer">
         Desarrollado Nicolas Ferraro para CoderHouse
       </div>
     </div>

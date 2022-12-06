@@ -4,11 +4,11 @@ import React from "react";
 import Header from "../componentes/Header/Header";
 import Footer from "../componentes/Footer/Footer";
 
-import s from "./Layout.css";
+import "./Layout.css";
 
 export default function Layout() {
   return (
-    <div className={s.Layout}>
+    <div className="Layout">
       <Header />
       <Outlet />
       <Footer />
